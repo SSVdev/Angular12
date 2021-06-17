@@ -1,3 +1,12 @@
-<h1>Xin Chào !</h1>
+<!-- <h1>Xin Chào !</h1>
 <p>Dự án Angular đầu tiên !</p>
-<app-home></app-home>
+<app-home></app-home> -->
+<!-- <app-about></app-about> -->
+<a [routerLink]="['/home']" routerLinkActive="router-link-active" >home page</a>
+&nbsp;|
+<a [routerLink]="['/about']" routerLinkActive="router-link-active" >about page</a>
+&nbsp;|
+<a [routerLink]="['/form']" routerLinkActive="router-link-active" >form page</a>
+&nbsp;|
+<a [routerLink]="['/reactive-form']" routerLinkActive="router-link-active" >reactive-form</a>
+<router-outlet></router-outlet>

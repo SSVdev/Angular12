@@ -1,0 +1,48 @@
+<h3>8) Routing - Thiết lập đường dẫn giữa các trang</h3>
+<p appBold>about works!</p>
+
+<h3>11) Http GET Profile - Fake Server</h3>
+<h3 appBold>Tôi tên là {{name}}</h3>
+<h3 appBold>Tôi đã {{age}} tuổi</h3>
+<button (click)="tangtuoi()">Tăng Tuổi</button>
+<br/>
+<h3>12) Http - GET method Client - Fake Server Json</h3>
+<h4>Print Comments string from Server:</h4>
+<!-- <br/> -->
+<span>{{comments | json}}</span>
+<br/>
+<h4>Print Comment [0]:</h4>
+<span *ngIf="comments">{{comments[0] | json}}</span>
+<br/>
+<h4>Print posts:</h4>
+<span *ngIf="posts">{{posts | json}}</span>
+
+<br/>
+<h3>13) Http - POST method Client </h3>
+<br/>
+Bạn Đang Có &nbsp;
+<span class="w3-badge w3-large w3-padding w3-red"> {{posts?.length}} </span> &nbsp; Tin Nhắn
+<br/>
+Posts: <br/>
+<div *ngFor="let i of posts">
+    <li>{{i | json}}</li>
+</div>
+<br/>
+<!-- <button (click)="addPost()">Thêm vào posts</button> -->
+
+<br/>
+<h3>14) posts Table</h3>
+<table>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+    </tr>
+    <tr *ngFor="let item of posts">
+      <td>{{item?.id}}</td>
+      <td>{{item?.title}}</td>
+      <td>{{item?.author}}</td>
+    </tr>
+  </table>
+  <br/>
+  <button (click)="addPost()">Thêm vào posts</button>

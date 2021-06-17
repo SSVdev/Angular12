@@ -1,5 +1,44 @@
+<h1>Xin Chào !</h1>
+<p>Dự án Angular đầu tiên !</p>
 <p>Angular: phần Component!</p>
 <div class="myborder">
     <p>Test CSS Border 1</p>
     <p>Test CSS Border 2</p>
 </div>
+<h3>Chào bạn {{ten}}<h3>
+<h3>Tôi đã {{tuoi}} tuổi</h3>
+<span *ngIf="tuoi >= 18" class="underAge">Bạn Trên 18 tuổi</span>
+<span *ngIf="tuoi < 18" class="overAge">Bạn dưới 18 tuổi</span>
+<br /> <br />
+Danh sách Xe:<br />
+<div *ngFor ="let i of vehicles">
+   <li>{{i}}</li>
+</div>
+<br />
+<div>
+    <select>
+        <option *ngFor ="let i of vehicles">{{i}}</option>
+    </select>
+</div>
+
+<input [(ngModel)] = "ten"/>
+<h3 class="underAge">Chào bạn {{ten}}</h3>
+<h3>Tôi đã {{tuoi}} tuổi</h3>
+<button (click)="tangtuoi()">Tăng Tuổi</button>
+
+<br />
+<h3>7) Học Pipe</h3>
+<h3>Chào bạn {{ten | uppercase}}<h3>
+<h3>Tôi đã {{tuoi | number:"1.0-2"}} tuổi</h3>
+<span>{{vehicles | json}}</span>
+<br>
+<span>giá bán là: {{price | currency }}</span>
+<br>
+<span>giá bán là: {{price | currency:'VND' }}</span>
+
+<br />
+<h3>9) Học Directives</h3>
+<span *ngIf="tuoi < 18" appBold>Bạn dưới 18 tuổi</span>
+<span *ngIf="tuoi >= 18" appBold>Bạn Trên 18 tuổi</span>
+
+
